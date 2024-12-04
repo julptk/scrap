@@ -9,12 +9,16 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions: write-all # Tambahkan izin di sini
+    permissions: write-all
 
     steps:
     # Checkout kode
     - name: Checkout code
       uses: actions/checkout@v3
+
+    # Memberikan izin eksekusi pada gradlew
+    - name: Grant execute permission for gradlew
+      run: chmod +x ./gradlew
 
     # Setup Java (sesuaikan versi Java sesuai kebutuhan Gradle Anda)
     - name: Set up JDK 11
