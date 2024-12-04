@@ -9,6 +9,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions: write-all # Tambahkan izin di sini
 
     steps:
     # Checkout kode
